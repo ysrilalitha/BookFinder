@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌈 Animated Gradient Background */
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #e9d5ff, #bae6fd);
+  }
+  25% {
+    background: linear-gradient(135deg, #fce7f3, #a5f3fc);
+  }
+  50% {
+    background: linear-gradient(135deg, #bbf7d0, #e9d5ff);
+  }
+  75% {
+    background: linear-gradient(135deg, #bae6fd, #fbcfe8);
+  }
+  100% {
+    background: linear-gradient(135deg, #e9d5ff, #bae6fd);
+  }
+}
+
+/* Make sure everything takes full height */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-left: 0%;
+  overflow-y: auto;
+}
+h1 {
+  padding-left: 25%;
+}
+.splash-image {
+  /* Set a specific width and height */
+  width: 40%; /* Example: adjust as needed */
+  height: 40%; /* Example: adjust as needed */
+
+  /* Your original padding-left, if still desired */
+  padding-left: 20%;
+}
+.main {
+  padding-left: 20%;
+  min-height: 100vh; /* ✅ Full height but flexible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* ✅ Top-aligned so it can scroll */
+  padding: 2rem;
+  overflow-y: auto;
+}
+.search-input {
+  /* Apply all the existing Tailwind styles from your JSX */
+  padding-right: 100%;
+}
+/* 🌈 Fullscreen animated background and centered layout */
+body {
+  display: flex;
+  align-items: center; /* centers vertically */
+  justify-content: center; /* centers horizontally */
+  animation: gradientShift 15s ease-in-out infinite;
+  background-size: 400% 400%;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* 🎯 Centered Book Finder box */
+.app-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  animation: gradientShift 15s ease-in-out infinite;
+  background-size: 400% 400%;
+}
+
+/* Optional fade-in animation for smooth entry */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-wrapper > div {
+  animation: fadeIn 1.5s ease;
+}
