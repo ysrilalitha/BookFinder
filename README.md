@@ -23,25 +23,25 @@ Clone the repository:
 
 Bash
 
-git clone [YOUR_REPOSITORY_URL]
+git clone - https://github.com/ysrilalitha/Bookfinder.git
 cd book-finder
 Install dependencies: The required packages include react, tesseract.js, and tailwindcss utilities.
 
 Bash
 
 npm install
-# OR
+(OR)
 yarn install
 Run the application:
 
 Bash
 
 npm start
-# OR
+(OR)
 yarn start
 The application will open automatically in your browser at http://localhost:3000.
 
-⚙️ Project Structure
+Project Structure
 The core functionality of the application resides in these files:
 
 src/App.js: Contains all the application logic, state management, API calls (searchBooks), OCR handling (handleImageSearch), and the complete JSX structure, including the segmented search bar.
@@ -50,7 +50,7 @@ src/components/BookList.jsx: (Assumed) Component responsible for rendering the l
 
 src/styles.css: Contains Tailwind CSS directives and any global styles.
 
-💻 Code Highlights
+ Code Highlights
 The segmented search bar is achieved using advanced Tailwind CSS Flexbox utilities directly within App.js:
 
 JavaScript
@@ -60,5 +60,5 @@ JavaScript
 </div>
 State Management: The application uses React's useState hook to manage the search query, filters, book results, and loading state.
 
-🤝 Contribution
+Contribution
 If you have any suggestions or find any bugs, please feel free to open an issue or submit a pull request!
